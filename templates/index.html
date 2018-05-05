@@ -1,13 +1,19 @@
 <!doctype html>
 <html>
+    <head>
+        <title>Social Network Feed in Flask</title>
+    </head>
     <body>
         <form action='/' method='post'>
-            <input placeholder='Name' name='name'>
-            <input placeholder='Post Content' name='post'>
-            <input type='submit' value='Submit'>
+            {{ form.csrf_token }}
+            {{ form.name.label }}<br/>
+            {{ form.name(placeholder="Name") }}<br/>
+            {{ form.content.label }}<br/>
+            {{ form.content(placeholder="Post Content") }}<br/>
+            {{ form.submit }}<br/>
         </form>
         {% for post in posts %}
-            <div>{{ post[1] + ': ' + post[2] }}</div>
+            <div>{{ post.name + ': ' + post.content }}</div>
         {% endfor %}
     </body>
 </html>
