@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block title %}Auth{% endblock %}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body class="auth">
+	<div class="login-panel">
+		<div class="login-header">
+			<div class="login-title">
+				{% block page_title %}{% endblock %}
+			</div>
+		</div>
+		<div class="login-form">
+			{% if error != None %}
+			<p>{{ error }}</p>
+			{% endif %}
+			{% block content %}{% endblock %}
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</body>
+</html>

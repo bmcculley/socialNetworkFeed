@@ -1,0 +1,156 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+
+.main {
+    margin: 0 auto;
+    max-width: 760px;
+    width: 100%;
+}
+
+.auth {
+    margin: 80px auto 0;
+    max-width: 320px;
+    width: 100%;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: #23527c;
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+.header,
+.content,
+.footer {
+    padding: 0 20px;
+}
+
+.header {
+    border-bottom: 1px solid #ccc;
+    padding-top: 12px;
+    margin-bottom: 30px;
+}
+
+.site-title {
+    float: left;
+}
+
+.menu {
+    float: right;
+    margin-top: 38px;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu li:not(:last-child):after {
+    color: #ccc;
+    content: '|';
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.footer {
+    border-top: 1px solid #ccc;
+    padding-top: 12px;
+    margin-bottom: 30px;
+}
+
+.login-panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.login-form {
+    padding: 15px;
+}
+
+.login-header {
+    background: #11557C;
+    padding: 10px 15px;
+}
+
+.login-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.login-title > a,
+.login-title > small,
+.login-title > .small,
+.login-title > small > a,
+.login-title > .small > a {
+    color: inherit;
+}
+
+#submit {
+    cursor: pointer;
+    float: right;
+}
+
+input[type="password"], input[type="text"] {
+    display: block;
+    width: 90%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+label {
+    color: #888;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+Flask Social
+{% endblock %}
+
+{% block page_title %}
+Flask Social
+{% endblock %}
+
+{% block content %}
+    {% if current_user.is_authenticated %}
+    <form action='/' method='post'>
+        {{ form.csrf_token }}
+        {{ form.content.label }}<br/>
+        {{ form.content(placeholder="Post Content") }}<br/>
+        {{ form.submit }}<br/>
+    </form>
+    <div class="clearfix"></div>
+    {% endif %}
+    {% for post in posts %}
+        <div>{{ post.user.username + ': ' + post.content }}</div>
+    {% endfor %}
+{% endblock %}
